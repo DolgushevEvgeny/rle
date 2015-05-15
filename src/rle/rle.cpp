@@ -118,7 +118,11 @@ void Pack_File(const string &inputFileName, const string &outputFileName)
 			}
 		}
 	}
-	WriteToFile(outputFile, digitsCount - 1, originalSymbol);
+
+	if (digitsCount - 1)
+	{
+		WriteToFile(outputFile, digitsCount - 1, originalSymbol);
+	}
 }
 
 void Unpack_File(const string &inputFileName, const string &outputFileName)
